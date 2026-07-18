@@ -1,0 +1,22 @@
+[project]
+name = "stock-predictor-lab"
+version = "0.1.0"
+description = "Laboratório educacional de predição de tendência de ações com backtesting walk-forward e paper trading"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "yfinance",
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic>=2",
+    "pydantic-settings",
+    "httpx",
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
