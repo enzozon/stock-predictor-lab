@@ -50,7 +50,9 @@ CREATE TABLE IF NOT EXISTS portfolio_snapshots (
 
 
 def get_conn(db_path: Path | str) -> sqlite3.Connection:
-    conn = sqlite3.connect(db_path)
+    # check_same_thread=False: o FastAPI executa endpoints sync em threadpool;
+    # cada request usa sua própria conexão, sem acesso concorrente à mesma.
+    conn = sqlite3.connect(db_path, check_same_thread=False)
     conn.row_factory = sqlite3.Row
     return conn
 

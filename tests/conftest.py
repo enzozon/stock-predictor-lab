@@ -30,7 +30,7 @@ def make_prices(n: int = 400, drift: float = 0.0005, vol: float = 0.01,
 
 @pytest.fixture
 def conn():
-    conn = sqlite3.connect(":memory:")
+    conn = sqlite3.connect(":memory:", check_same_thread=False)
     conn.row_factory = sqlite3.Row
     init_db(conn)
     yield conn
