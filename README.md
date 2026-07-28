@@ -1,5 +1,7 @@
 # stock-predictor-lab
 
+[![CI](https://github.com/enzozon/stock-predictor-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/enzozon/stock-predictor-lab/actions/workflows/ci.yml)
+
 Laboratório **educacional** de predição de tendência de ações brasileiras com
 backtesting walk-forward rigoroso e bot de **paper trading** (simulação — nunca
 executa ordens reais). Leia o [DISCLAIMER](DISCLAIMER.md) antes de qualquer coisa.
